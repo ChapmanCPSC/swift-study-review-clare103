@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,105 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Study Word" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8y-aY-bzJ">
+                                <rect key="frame" x="40" y="20" width="380" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="dJe-zv-a3a"/>
+                                    <constraint firstAttribute="width" constant="239" id="u4j-oE-mtX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="u4j-oE-mtX"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Definition" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmG-GS-BBj">
+                                <rect key="frame" x="181" y="111" width="239" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aJr-0z-QRU"/>
+                                    <constraint firstAttribute="width" constant="239" id="dC9-Li-z4u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ali" translatesAutoresizingMaskIntoConstraints="NO" id="nSS-v5-6lf">
+                                <rect key="frame" x="20" y="219" width="560" height="282"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="iyl-jz-oDR"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="iyl-jz-oDR"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAV-ia-cPU">
+                                <rect key="frame" x="428" y="20" width="152" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="Zti-ul-ylc"/>
+                                    <constraint firstAttribute="width" constant="152" id="aHe-jZ-VsV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmk-3J-eqN">
+                                <rect key="frame" x="209" y="509" width="183" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="183" id="34R-IV-Aij"/>
+                                    <constraint firstAttribute="height" constant="71" id="47C-pA-Ejp"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="onNextPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wKi-zN-NXt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xmk-3J-eqN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cnc-02-z3z"/>
+                            <constraint firstItem="nSS-v5-6lf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FGn-tW-pzW"/>
+                            <constraint firstItem="OAV-ia-cPU" firstAttribute="leading" secondItem="N8y-aY-bzJ" secondAttribute="trailing" constant="8" id="Lfc-jY-7PV"/>
+                            <constraint firstItem="Xmk-3J-eqN" firstAttribute="top" secondItem="nSS-v5-6lf" secondAttribute="bottom" constant="8" id="NYc-WE-0pp"/>
+                            <constraint firstItem="nSS-v5-6lf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="OQK-eg-ufr"/>
+                            <constraint firstItem="nSS-v5-6lf" firstAttribute="top" secondItem="pmG-GS-BBj" secondAttribute="bottom" constant="8" id="YVy-3g-2jv"/>
+                            <constraint firstItem="pmG-GS-BBj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bEd-UC-HZK"/>
+                            <constraint firstItem="pmG-GS-BBj" firstAttribute="top" secondItem="N8y-aY-bzJ" secondAttribute="bottom" constant="8" id="caw-eB-wht"/>
+                            <constraint firstItem="OAV-ia-cPU" firstAttribute="leading" secondItem="N8y-aY-bzJ" secondAttribute="trailing" constant="8" id="eMY-Ee-QXl"/>
+                            <constraint firstItem="N8y-aY-bzJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="isp-Wb-xQe"/>
+                            <constraint firstItem="Xmk-3J-eqN" firstAttribute="top" secondItem="nSS-v5-6lf" secondAttribute="bottom" constant="8" id="oVr-IT-QjV"/>
+                            <constraint firstItem="Xmk-3J-eqN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pbM-TY-Vwx"/>
+                            <constraint firstItem="OAV-ia-cPU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sHV-m3-Qw1"/>
+                            <constraint firstItem="OAV-ia-cPU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="uVt-vX-xyM"/>
+                            <constraint firstItem="N8y-aY-bzJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="xyt-tG-Dce"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xmk-3J-eqN" secondAttribute="bottom" constant="20" id="z7R-Fw-oeB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oVr-IT-QjV"/>
+                                <exclude reference="pbM-TY-Vwx"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="codeSnipet" destination="nSS-v5-6lf" id="B1C-xM-seX"/>
+                        <outlet property="definitionLbl" destination="pmG-GS-BBj" id="iR7-bT-xoy"/>
+                        <outlet property="nextBtn" destination="Xmk-3J-eqN" id="6Xh-hQ-xkv"/>
+                        <outlet property="timerLbl" destination="OAV-ia-cPU" id="CZv-jk-CxU"/>
+                        <outlet property="wordLbl" destination="N8y-aY-bzJ" id="jGA-DM-D0u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="280" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ali" width="450" height="348"/>
+    </resources>
 </document>
